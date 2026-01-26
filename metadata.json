@@ -1,0 +1,8 @@
+{
+  "name": "HydraPro IA | Command Center",
+  "description": "Interface de comando HydraPro IA. Desenvolvido por Dionathan Martins. Sistema de inteligência técnica, fria e eficiente.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>HYDRA SUPREME DASHBOARD</title>
+    <style>
+        body { background: #050505; color: #00ff41; font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
+        .terminal { border: 1px solid #00ff41; padding: 20px; background: rgba(0, 255, 65, 0.05); box-shadow: 0 0 20px rgba(0, 255, 65, 0.2); }
+        .project-card { border-left: 5px solid #ff3c00; background: #111; padding: 15px; margin: 10px 0; cursor: pointer; transition: 0.3s; }
+        .project-card:hover { background: #222; transform: translateX(10px); }
+        .status-on { color: #00ff41; font-weight: bold; }
+        h1 { border-bottom: 2px solid #00ff41; padding-bottom: 10px; }
+        .btn-action { background: #ff3c00; color: white; border: none; padding: 10px 20px; cursor: pointer; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="terminal">
+        <h1>HYDRA SUPREME - CENTRAL DE COMANDO</h1>
+        <p>Operador: <strong>Dionathan Martins</strong></p>
+        <p>Status do Núcleo: <span class="status-on">OPERACIONAL</span></p>
+        
+        <div id="projects">
+            <div class="project-card">
+                <h3>PROJETO: KLING_AI_CLONE</h3>
+                <p>Status: Clonado / Pronto para Visualização</p>
+                <p>URL Original: https://klingai.com/global/</p>
+                <button class="btn-action" onclick="window.location.href='http://localhost:8080'">ABRIR VISUALIZADOR</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

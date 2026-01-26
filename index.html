@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydraPro IA | Command Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "@google/genai": "https://esm.sh/@google/genai@1.35.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?external=react",
+    "d3": "https://esm.sh/d3@7.8.5",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+    <script>
+        // Polyfill de ambiente para compatibilidade com SDKs que esperam Node.js
+        window.process = { 
+            env: { 
+                API_KEY: "" 
+            } 
+        };
+        window.global = window;
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #010102;
+            color: #e2e8f0;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .glass {
+            background: rgba(5, 10, 8, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(16, 185, 129, 0.08);
+        }
+        
+        .message-ai {
+            background: #0f1f1a;
+            color: #e6fdf5;
+            border-radius: 14px;
+            padding: 14px 16px;
+            font-size: 14px;
+            align-self: flex-start;
+            max-width: 85%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            margin-bottom: 12px;
+        }
+
+        .message-user {
+            background: #00c48c;
+            color: #00130d;
+            border-radius: 14px;
+            padding: 14px 16px;
+            font-size: 14px;
+            align-self: flex-end;
+            max-width: 85%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .chat-input-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            gap: 8px;
+            padding: 16px;
+            background: #050a08;
+            border-top: 1px solid #0a3f2a;
+            z-index: 50;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            font-size: 14px;
+            background: #0f1f1a;
+            color: #e6fdf5;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        
+        .chat-input:focus {
+            border-color: #00c48c;
+        }
+
+        .chat-send {
+            padding: 0 20px;
+            border-radius: 12px;
+            border: none;
+            background: #00c48c;
+            color: #00130d;
+            cursor: pointer;
+            transition: transform 0.1s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chat-send:active {
+            transform: scale(0.95);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>
